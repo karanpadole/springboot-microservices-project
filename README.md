@@ -31,5 +31,18 @@
 3. Start Services
 4. Start API Gateway
 
+## 📬 Postman Collection
+
+You can test all APIs using the Postman collection:
+
+📁 Location: `/postman/microservices-postman-collection.json`
+
+### ▶️ Steps to Use:
+1. Open Postman
+2. Click **Import**
+3. Upload the JSON file
+4. Run APIs
+
+
 ## 👨‍💻 Author
 Karan Padole
