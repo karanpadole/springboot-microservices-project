@@ -1,0 +1,362 @@
+{
+  "info": {
+    "_postman_id": "f449908e-b125-4a8a-9172-65af7b99c0f6",
+    "name": "Microservices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51745186"
+  },
+  "item": [
+    {
+      "name": "USER SERVICE",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"sham pawar\",\r\n    \"email\":\"ravi@gmail.com\",\r\n    \"about\" :\" I am a Super man\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User User By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/users/08dde3bd-e102-43c3-8b4e-9bdc5cb20ffd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "users",
+                "08dde3bd-e102-43c3-8b4e-9bdc5cb20ffd"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "HOTEL SERVICE",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"hotel sukkon\",\r\n    \"location\":\"banglore\",\r\n    \"about\":\"7 star hotel\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8083/hotels",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "hotels"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Hotels",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/hotels",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "hotels"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get HotelBy Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8083/hotels/311bc12c-e061-49ad-82b3-40076551e3bc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8083",
+              "path": [
+                "hotels",
+                "311bc12c-e061-49ad-82b3-40076551e3bc"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "RATING SERVICE",
+      "item": [
+        {
+          "name": "add Rating",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\":8,\r\n    \"feedback\":\"this hotel is  very good\",\r\n    \"userId\":\"76699135-8407-41bd-8903-6e4c71304fed\",\r\n    \"hotelId\":\"0003d8ec-3d3d-4011-84bd-cc76bcc2a919\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8084/rating",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "rating"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all rating",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/rating",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "rating"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getRatingByHotelId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/rating/hotel/311bc12c-e061-49ad-82b3-40076551e3bc",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "rating",
+                "hotel",
+                "311bc12c-e061-49ad-82b3-40076551e3bc"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getRatingByUserId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8084/rating/user/08dde3bd-e102-43c3-8b4e-9bdc5cb20ffd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8084",
+              "path": [
+                "rating",
+                "user",
+                "08dde3bd-e102-43c3-8b4e-9bdc5cb20ffd"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "API-Gateway",
+      "item": [
+        {
+          "name": "API-Gateway(suport all serrvices enpoint like rating, user,hotel)",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\":8,\r\n    \"feedback\":\"this hotel is  very good\",\r\n    \"userId\":\"76699135-8407-41bd-8903-6e4c71304fed\",\r\n    \"hotelId\":\"0003d8ec-3d3d-4011-84bd-cc76bcc2a919\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8086/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8086",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Service-Registary-Eureka-(use this on browser)",
+      "item": [
+        {
+          "name": "eureka",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\":8,\r\n    \"feedback\":\"this hotel is  very good\",\r\n    \"userId\":\"76699135-8407-41bd-8903-6e4c71304fed\",\r\n    \"hotelId\":\"0003d8ec-3d3d-4011-84bd-cc76bcc2a919\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8761/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8761",
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "actuator",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"rating\":8,\r\n    \"feedback\":\"this hotel is  very good\",\r\n    \"userId\":\"76699135-8407-41bd-8903-6e4c71304fed\",\r\n    \"hotelId\":\"0003d8ec-3d3d-4011-84bd-cc76bcc2a919\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8081/actuator/health",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "actuator",
+                "health"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "circuitbreakers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/actuator/circuitbreakers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "actuator",
+                "circuitbreakers"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
