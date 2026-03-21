@@ -25,6 +25,47 @@ spring:
   config:
     import: optional:configserver:http://localhost:8085
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+
+#    oauth2:
+#      client:
+#        registration:
+#          okta:
+#            client-id: 0uCpulXs7EHFcTRo6J69xn75PdHqqlNt
+#            client-secret: 62DjDpmnJ726yIWRSEayJyrrSLDbPHkpro0pw8tpp7l4g2r05FsNMpDQTtmWgb2d
+#            scope:
+#              - openid
+#              - profile
+#              - email
+#        provider:
+#          okta:
+#            issuer-uri: https://dev-3corgfi2z0hauo.okta.com/oauth2/default
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://dev-3corgfi2z0hauo.okta.com/oauth2/default
+
+
+
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          okta:
+#            client-id: 0uCpulXs7EHFcTRo6J69xn75PdHqqlNt
+#            client-secret: 62DjDpmnJ726yIWRSEayJyrrSLDbPHkpro0pw8tpp7l4g2r05FsNMpDQTtmWgb2d
+#          scope: openid, profile, email
+#        provider:
+#          okta:
+#            issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com
+#
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com
+
 
 #eureka:
 #  instance:
@@ -34,3 +75,14 @@ spring:
 #    register-with-eureka: true
 #    service-url:
 #      defaultZone: http://localhost:8761/eureka
+
+#Okta configuration for API gateway
+#okta:
+#  oauth2:
+#    issuer: https://dev-ew3corgfi2z0hauo.us.auth0.com/api/v2/
+#    audience: http://localhost:8080
+#    client-id: V5jwy3BF0IlOcMb5uZmv3zI7mVLquu6m
+#    client-secret: DZ4B_kbYHUkHlcSkcY9mQgusTSNCLyeepvXRVhU3haxDX63R7KYlBXE7sA5BLwMz
+#    scopes: openid, profile, email, offline_access
+
+
