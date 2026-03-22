@@ -15,6 +15,7 @@ spring:
       ddl-auto: update
     show-sql: true
 
+
   #  application:
 #    name: USER-SERVICE
 
@@ -23,6 +24,77 @@ spring:
     import: optional:configserver:http://localhost:8085
 
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+#          jwk-set-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/.well-known/jwks.json
+
+      client:
+        registration:
+          auth0-client:
+            provider: auth0
+            authorization-grant-type: client_credentials
+            client-id: JnAYktZ1MWZNJL8URZg6AmQIoE05911D
+            client-secret: HPc5SLaw_DCgecDQANAFrINGf6YveDqKH6wutf1zJ6mbrYh3RhLmZdk-izoR0gxW
+          scope:
+              - openid
+              - profile
+              - email
+
+        provider:
+          auth0:
+            issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+
+
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+#      client:
+#        registration:
+#          my-internal-client:
+#            provider: okta
+#            authorization-grant-type: client-credentials
+#            scope: internal
+#            client-id: JnAYktZ1MWZNJL8URZg6AmQIoE05911D
+#            client-secret: HPc5SLaw_DCgecDQANAFrINGf6YveDqKH6wutf1zJ6mbrYh3RhLmZdk-izoR0gxW
+#            scopes: openid, profile, email, offline_access
+#        provider:
+#          okta:
+#            issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+
+
+
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+#
+#      client:
+#        registration:
+#          auth0-client:
+#            provider: auth0
+#            authorization-grant-type: client_credentials
+#            client-id: JnAYktZ1MWZNJL8URZg6AmQIoE05911D
+#            client-secret: HPc5SLaw_DCgecDQANAFrINGf6YveDqKH6wutf1zJ6mbrYh3RhLmZdk-izoR0gxW
+#          scope:
+#            - openid
+#            - profile
+#            - email
+#
+#        provider:
+#          auth0:
+#            issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+#
+#
+#okta:
+#  oauth2:
+#    issuer: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+#    audience: api://default
 
 #  profiles:
 #    active: prod
