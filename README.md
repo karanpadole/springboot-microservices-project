@@ -15,6 +15,7 @@
 * Spring Boot
 * Spring Cloud
 * MySQL
+* Mongo DB
 * Resilience4j
 
 ## 🔥 Features
