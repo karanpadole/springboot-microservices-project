@@ -18,6 +18,13 @@ spring:
     import: optional:configserver:http://localhost:8085
 
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-ew3corgfi2z0hauo.us.auth0.com/
+
+
 
 #eureka:
 #  instance:
